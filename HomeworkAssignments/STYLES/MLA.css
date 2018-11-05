@@ -1,23 +1,28 @@
 body{
     background-image:url("https://upload.wikimedia.org/wikipedia/commons/e/e1/FullMoon2010.jpg"); 
-    overflow: hidden;
+    overflow: scroll;
+    flex-grow: 1;
+
 }
 div.body {
 position: absolute;
 width: 600px;
 height:100%;
 background-image:url("https://upload.wikimedia.org/wikipedia/commons/e/e1/FullMoon2010.jpg"); 
-overflow: hidden;
+overflow: scroll;
 background-color: darkblue;
 flex-grow: 1;
+margin-left: 10px;
+color: white;
+text-align: left
 }
 
 
 div.heading{
 width: 100%;
 height:100px;
-color:mediumblue);
-background-color: #aaaaaa);
+color:white;
+background-color:#aaaaaa;
 flex-grow: 1;
 
 
@@ -63,50 +68,83 @@ overflow: scroll;
 width: 100%;
 height:100%;
 padding-top: 10px;
-opacity: 0.8;
+opacity: 0.7;
 background-color: #cccccc;
-margin: 5px;
+margin: 0px;
 flex-grow: 1;
-padding
+color:white;
+float: left;;
+font: white;
 
 
 }
 a.nav:hover{
 background-color: rgb(27, 20, 121);
 }
-div.aside{
-    padding-left: 40px;
-    padding-right:5px;
-    padding-top: 10%;
+aside{
+    padding-left: 60%;
+    padding-right: 5%;
+    padding-bottom: 20%;
     width: 600px;
-    height:40%;
+    height:10px;
     overflow: hidden;
     background-color: rgb(142, 142, 226);
     float: right;
-    background-image:url("https://upload.wikimedia.org/wikipedia/commons/e/e1/FullMoon2010.jpg"); 
+    background-color: transparent;
     flex-grow: 2;
     opacity: 0.7;
-    border-block-end-style: hidden
+    border-block-end-style: hidden;
+    background-position: top;
+    margin-bottom: 1%;
+    background-position-x: 600px;  
+    position: relative;
 }
 footer{
-    /* text-align: center-bottom; */
+    text-align: center-bottom;
     font-size: 15px;
     color:white;
-    padding-bottom: 20px;
+    position: bottom;
+    float:bottom;
+     display: block;
+    }
+
+   
 
 }
 div.aside1{
-    padding-left: 60px;
+    padding-left: 70px;
     padding-right:15px;
     padding-top: 20%;
     width: 600px;
-    height:100%;
+    height:50%;
     overflow: hidden;
-    background-color:transparent 100%;
+    background-color:transparent;
     float: right;
     background-image:url("https://upload.wikimedia.org/wikipedia/commons/e/e1/FullMoon2010.jpg"); 
     flex-grow: 2;
     opacity: 0.7;
     border-block-end-style: hidden;
     position: sticky;
+    border-color: transparent;
+    scroll-behavior: smooth;
+    color: white;
+}
+
+img{
+    opacity: 0.7;
+}
+pre{
+float: left;
+position: absolute;
+color: white;
+text-align: left;
+}
+table{
+position: absolute;
+color: white;
+position: bottom;
+float:left;
+page-break-after: auto;
+margin-top: 1%;
+
 }
