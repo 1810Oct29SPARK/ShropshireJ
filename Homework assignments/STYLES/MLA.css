@@ -75,6 +75,7 @@ flex-grow: 1;
 color:white;
 float: left;;
 font: white;
+border-style: ridge
 
 
 }
@@ -140,11 +141,11 @@ color: white;
 text-align: left;
 }
 table{
-position: absolute;
+position: relative;
 color: white;
 position: bottom;
-float:left;
+float:center;
 page-break-after: auto;
 margin-top: 1%;
-
+display:inline;
 }
