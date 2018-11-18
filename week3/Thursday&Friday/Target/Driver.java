@@ -1,6 +1,11 @@
 public class Driver {
 
 	public static void main(String[] args) {
+		//Make some cars
+		Car myCar = Car(2006, "Elantra", "Hyndai");
+		Car myOtherCar = new Car(2018,"Model M", "Tesla");
+		(myCar.setMilesSinceOilChange(100);
+		if
 		
 		System.out.println("this is the point of entry into my program");
 		
@@ -36,5 +41,17 @@ public class Driver {
 
 		Bubbles.move();
 		Bubbles.Flying();
+//declared a variable garage which is an  array of Vehicles
+		//created an empty array with five elements and assigned it to garage
+		Vehicle[] garage =  new Vehicle[5];
+		//add vehicles to array
+		garage[0] = carOne;
+		garage[1] = new Boat("The Black Pearl","black");
+		garage[2] = new Car(1880,"Horse","Horse");
+		garage[3] = carTwo;
+		garage[4] = new Boat("Boaty McBoatface","green");
+		for (int i=0; i < garage.length; i++) {
+			garage[i].move();
+		}
 	}
 }
