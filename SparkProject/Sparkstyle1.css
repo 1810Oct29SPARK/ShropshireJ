@@ -17,6 +17,8 @@ body {
     background-image: linear-gradient(rgb(255, 62, 62), black);
     color:white;
     text-anchor: middle;
+    width: 100%;
+    height: 100%;
     
 }
 
@@ -82,182 +84,13 @@ body {
 .dropdown:hover .dropbtn {
     background-image:linear-gradient(white,red);
 }
-/* Create three unequal columns that floats next to each other */
-.column {
-    float: left;
-    padding: 5px;
-    background-image: linear-gradient(white,red,black);
-    color: #000;
-}
 
-/* Left and right column */
-.column.side {
-    width: 25%;
-    background-image: linear-gradient(white,red,black);
-    height: 100%;
-    color: #000;
-    
-}
-
-/* Left and right column */
-.column.sideright {
-    width: 25%;
-    background-image: linear-gradient(white,red,black);
-    height: 100%;
-    color: #000;
-    margin: -.7px;
-    top: 2px;       
-    color: black;
-}
-a:link {
-    text-decoration: none;
-    color: #000;
-}
-a:hover {
-    text-decoration: underline;
-}
-
-/* Middle column */
-.column.middle {
-    width: 50%;
-    background-image: linear-gradient(white,red,black);
-    height: 100%;
-    color: #000;
-}
-
-/* Clear floats after the columns */
-.row:after {
-    content: "";
-    display: table;
-    clear: both;
-}
-
-/* Responsive layout - makes the three columns stack on top of each other instead of next to each other */
-@media screen and (max-width: 600px) {
-    .column.side, .column.middle {
-        width: 100%;
-    
-    }
-}
-table {
-    font-family: arial, sans-serif;
-    border-collapse: collapse;
-    width: 90%;
-    border-block-end-color: #000;
-    padding-bottom: 20%;
-}
-
-td, th {
-    border: 1px solid #6e1515;
-    text-align: left;
-    padding: 10px;
-    margin-bottom: 10%;
-}
-
-tr:nth-child(even) {
-    background-color: #dddddd;
-}
-h2{
-    text-align: center;
-}
-img{
-    transform: rotate(0deg);
-    width: 500px;
-    height: 500px;
-    border-style: ridge;
-    border-color:  linear-gradient(white,red,black);
-    color: #f9f9f9;
-    text-decoration-color: white;
-
-    
-}
-.img2{
-    transform: rotate(90deg);
-    width: auto;
-    height: auto;
-    border-color:  linear-gradient(white,red,black);
-
-}
-.img3{
-    width: auto;
-    height: auto;
-    border-style: inset;
-    border-color:  linear-gradient(white,red,black);
-    overflow: hidden;
-    padding-right: 5%;
-    margin-right: 5%;
-}
-
-.column.middle2 {
-    width: 1650px;
-    background-image: linear-gradient(white,red,black);
-    height: 100%;
-    color: #000;
-}
-
-.column.side3 {
-    width: 25%;
-    background-image: linear-gradient(white,red,black);
-    height: 100%;
-    color: #000;
-    
-
-   
-}
-
-input[type=text] {
-    width: 130px;
-    -webkit-transition: width 0.4s ease-in-out; 
-     transition: width 0.4s ease-in-out;
-}
-
-/* When the input field gets focus, change its width to 100% */
-input[type=text]:focus {
-    width: 50%;
-}
-input{
-    float: right;
-}
-form{
-    float: right;
-    width: 15%;
-    height: auto;
-}
-
-.text{
-    color: white;
-}
-
-table{
-    grid-auto-columns: 10%;
-}
-
-a:link{
-    text-decoration: none;
-
-}
-
-#words{
-    color: white;
-    text-align: center;
-}
-
-.image1{
-width: 100%;
-height:500px;
-}
 
 .column.middle.last{
     text-align: center;
 
 }
 
-.dropbtn1 {
-    background-image:radial-gradient(red,white);
-    color: white;
-    padding: 16px;
-    font-size: 16px;
-    border: none;
-    cursor: pointer;
-    border-radius: 70%
+.p {
+    font-family: 'font-effect-vintage';
 }
