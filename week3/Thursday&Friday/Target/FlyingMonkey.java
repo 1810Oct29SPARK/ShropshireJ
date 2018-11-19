@@ -33,7 +33,7 @@ public class FlyingMonkey extends Vehicle {
 		return this.size;
 	}
 
-	public void setAge(int Age){
+	public void setAge(int age){
 		this.age = age;
 	}
 

@@ -1,13 +1,13 @@
 
-public class FlyingMokey extends Vehicle {
+public class Motorcycle extends Vehicle {
 
 	//constructor with no field (a "no-args" constructor)
-	public FlyingMokey(){
+	public Motorcycle(){
 		System.out.println("called noargs constructor");
 	}	
 
 	//constructor with all the fields
-	public FlyingMokey(int yearManufactured, String model, String make){
+	public Motorcycle(int yearManufactured, String model, String make){
 		//"this" refers to the Car object being created, NOT the argument
 		this.age = age;	
 		this.color =color;
@@ -32,7 +32,7 @@ public class FlyingMokey extends Vehicle {
 		return this.size;
 	}
 
-	public void setAge(int Age){
+	public void setAge(int age){
 		this.age = age;
 	}
 
@@ -47,7 +47,7 @@ public class FlyingMokey extends Vehicle {
 	//override inherited move() method 
 	@Override		//doesn't DO anything, but will fail to compile if no matching superclass method
 	public void move(){
-		System.out.println("FlyingMokey is moving");
+		System.out.println("Bike is burning rubber");
 	}
 
 }

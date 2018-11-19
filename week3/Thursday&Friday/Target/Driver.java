@@ -10,7 +10,15 @@ public class Driver {
 			int milesLeft = Car.milesBetweenOilChanges - myCar.getMilesSinceOilChange();
 			System.out.println("You have "+milesLeft+" miles left");
 		}
-		
+		FlyingMonkey monkey = new FlyingMonkey(15, "brown", "BigAsHell");
+
+		monkey.move();
+		monkey.Flying();
+		 System.out.println(" my age  " + monkey.getAge() + " my color is " 
+		 					+ monkey.getColor() + " and i am" + monkey.getSize());
+
+		Motorcycle bike = new Motorcycle();
+		bike.move();
 	}
  	public static void init(){
 		
