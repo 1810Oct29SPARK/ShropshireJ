@@ -49,5 +49,20 @@ public class ReimbursementsController {
 
 		return empty;
 	}
-
+   public static String approve(HttpServletRequest req) {
+	 
+	   int id = Integer.parseInt(req.getParameter("r_id"));
+	   User u =(User) req.getSession().getAttribute("loger");
+	   serv.approve(id, u.getUser_id(), u.getRole_id());
+	   return " ";
+   }
+   public static String deny(HttpServletRequest req) {
+		 
+	   int id = Integer.parseInt(req.getParameter("r_id"));
+	   User u =(User) req.getSession().getAttribute("loger");
+	   serv.deny(id, u.getUser_id(), u.getRole_id());
+	   return " ";
+   }
 }
+
+

@@ -28,6 +28,10 @@ public class RequestHelper {
 		case "/Reimbursement_System/getuserreimbursement.json":
 			System.out.println("Here are our Reimbursements");
 			return ReimbursementsController.allReimbursements(req);
+			case "/Reimbursement_System/approve.serv":
+			return ReimbursementsController.approve(req);
+			case "/Reimbursement_System/deny.serv":
+				return ReimbursementsController.deny(req);
 		default:
 			return "indexhtml";// gonna change this soon g
 

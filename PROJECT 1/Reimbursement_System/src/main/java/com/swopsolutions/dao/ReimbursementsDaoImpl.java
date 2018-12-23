@@ -117,7 +117,7 @@ public class ReimbursementsDaoImpl implements MasterDAO {
 			ps.setInt(1, s_id);
 			ps.setInt(4, r_id);
 			ps.setInt(2, resolver_id);
-			ps.setDate(3, (java.sql.Date) new Date());
+			ps.setDate(3, null);
 			return ps.executeUpdate();
 
 		} catch (SQLException e) {

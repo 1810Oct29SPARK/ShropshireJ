@@ -38,19 +38,19 @@ public class Service {
 
 	}
 
-	public int approve(int r_id, int resolver_id, String role) {
+	public int approve(int r_id, int resolver_id, int role) {
 
 		int i = -1;
-		if (role.equalsIgnoreCase("admin")) {
+		if (role==2) {
 			i = rDAO.updateReimbursements(r_id, 2, resolver_id);
 
 		}
 		return i;
 	}
 
-	public int deny(int r_id, int resolver_id, String role) {
+	public int deny(int r_id, int resolver_id, int role) {
 		int i = -1;
-		if (role.equalsIgnoreCase("admin")) {
+		if (role==2) {
 			i = rDAO.updateReimbursements(r_id, 3, resolver_id);
 
 		}
