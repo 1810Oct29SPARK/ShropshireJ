@@ -1,0 +1,18 @@
+#carouselExampleSlidesOnly{
+height: 400px;
+
+}
+
+h1{
+font-size: 60px;
+}
+
+  table{
+    box-shadow: 10px 10px;
+  }
+  .row{
+      align-self: auto;
+  }
+  .water{
+      float: right;
+  }
