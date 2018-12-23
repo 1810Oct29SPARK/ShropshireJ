@@ -20,7 +20,7 @@
     <url-pattern>/MasterServlet</url-pattern>
   </servlet-mapping>
  
-    <!--
+<!--    
      <servlet>
       <description></description>
     <display-name>LoginServlet</display-name>

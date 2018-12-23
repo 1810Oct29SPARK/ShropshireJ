@@ -21,7 +21,7 @@ public class MasterServlet extends HttpServlet {
 			throws ServletException, IOException {
 		System.out.println(request.getRequestURI());
 		request.getRequestDispatcher(RequestHelper.process(request)).forward(request, response);
-		response.getWriter().append("Served at: ").append(request.getContextPath());
+		//response.getWriter().append("Served at: ").append(request.getContextPath());
 	}
 
 	/**

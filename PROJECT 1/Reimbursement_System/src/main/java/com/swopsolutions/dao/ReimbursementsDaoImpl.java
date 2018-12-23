@@ -44,25 +44,29 @@ public class ReimbursementsDaoImpl implements MasterDAO {
 
 	// Retrieve
 	public List<Reimbursements> retrieveSeys() {
-		List seys = new ArrayList<>();
+		List<Reimbursements> seys = new ArrayList<>();
 		try (Connection con = ConnectionUtil.getConnection(filename)) {
+			System.out.println("In the retrieve dao");
 			String sql = "select * from reimbursements";
 			PreparedStatement ps = con.prepareStatement(sql);
 			ResultSet rs = ps.executeQuery();
 			while (rs.next()) {
 				Reimbursements r = new Reimbursements(rs.getInt("r_id"), rs.getString("r_description"),
 						rs.getDouble("amount"), rs.getBlob("picture"), rs.getInt("u_id"), rs.getInt("status_id"),
-						rs.getTimestamp("create_date"), rs.getTimestamp("resolve_date"), rs.getInt("resolver_id"),
+						rs.getTimestamp("created_date"), rs.getTimestamp("resolve_date"), rs.getInt("resolver_id"),
 						rs.getInt("r_type"));
 				System.out.println(rs.getString("r_description"));
 				seys.add(r);
 				System.out.println(r);
 			}
 		} catch (SQLException s) {
+			s.printStackTrace();
 
 		} catch (IOException e) {
+			e.printStackTrace();
 
 		}
+		System.out.println("Returned: " );
 		return seys;
 
 	}

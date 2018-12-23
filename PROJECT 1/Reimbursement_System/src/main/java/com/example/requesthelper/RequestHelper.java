@@ -25,9 +25,9 @@ public class RequestHelper {
 		case "/Reimbursement_System/ticket.serv":
 			System.out.println("we submitted a Reimbursements");
 			return ReimbursementsController.newReimbursement(req);
-		case"/Reimbursement_System/getuserreimbursement.json":
+		case "/Reimbursement_System/getuserreimbursement.json":
 			System.out.println("Here are our Reimbursements");
-			return JSONController.allReimbursements(req);
+			return ReimbursementsController.allReimbursements(req);
 		default:
 			return "indexhtml";// gonna change this soon g
 

@@ -15,11 +15,14 @@ public class UserController {
 		String username = req.getParameter("username");
 		String password = req.getParameter("password");
 		
-
+		//Gotta work on the naming conventions --> serv login is different to this login
+		
+		//this will only work if the user and pass is already in the database....
 		User logee = serv.login(username, password);
 		System.out.println(logee);
+		//invalid user 
 		if (logee == null) {
-			return "/index.html";
+			return "/invalidUser.html";
 		}
 		String logees;
 		try {

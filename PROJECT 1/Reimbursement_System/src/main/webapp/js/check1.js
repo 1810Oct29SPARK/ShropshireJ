@@ -1,7 +1,6 @@
 /**
  * 
  */
-
 window.onload = function() {
 	populateUser();
 }
@@ -19,7 +18,7 @@ function populateUser() {
 		// parse the response as JSON
 		storedUser = data;
 		console.log(data);
-		profileDisplay();
+		populateReimbursement();
 		// check whether there was a user returned
 		
 	});
@@ -27,27 +26,11 @@ function populateUser() {
 	// define behavior for user returned
 	// define behavior for no user returned
 }
+var storedReimbursement;
 
-   function profileDisplay(){
-	   document.title= storedUser.firstName +' '+ storedUser.lastName+'\'s Reimbursements';
-	   document.getElementById('name').innerHTML=storedUser.firstName +' '+ storedUser.lastName;
-	   document.getElementById('username').innerHTML=storedUser.username;
-	   document.getElementById('email').innerHTML=storedUser.email;
-	   if (storedUser.role_id === 2){
-	   document.getElementById('role').innerHTML="Admin";
-	   }else{
-		   document.getElementById('role').innerHTML="Employee";
-		   
-		   
-
-	   }// populateReimbursement();
-
-   }
-
-	var storedReimbursement;
-
-	/*function populateReimbursement() {
-		// send a get request to localhost:7001/Reimbursement_System/employeeuser
+	function populateReimbursement() {
+		console.log('sean is the best');
+		// send a get request to localhost:7001/Reimbursement_System/getuserreimbursement
 		fetch("http://localhost:7001/Reimbursement_System/getuserreimbursement.json", {
 			method : "POST"
 		}).then(function(response) {
@@ -70,13 +53,13 @@ function populateUser() {
 
 		// define behavior for user returned
 		// define behavior for no user returned
-	}*/
+	}
 
 	   function rbDisplay(item){
 		   let ret='<tr><td> $'+ item.amount;
-		   ret+='</td><td>'+ item.username;
+		   ret+='</td><td>'+ item.u_id;
 		   ret+='</td><td>'+ item.created_date;
-		   ret+='</td>  <td>'+item.Description;
+		   ret+='</td>  <td>'+item.r_description;
 		  
 		   if (storedUser.role===2){
                ret+=`<td>
@@ -118,4 +101,3 @@ function populateUser() {
 			   }
 			 }
 			
-

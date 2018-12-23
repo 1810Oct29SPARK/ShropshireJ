@@ -97,8 +97,8 @@ public class Reimbursements {
 		this.status_id = status_id;
 	}
 
-	public Timestamp getCreated_date() {
-		return created_date;
+	public String getCreated_date() {
+		return "" + created_date;
 	}
 
 	public void setCreated_date(Timestamp created_date) {

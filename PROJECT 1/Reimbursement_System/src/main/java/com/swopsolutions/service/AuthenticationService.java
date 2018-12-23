@@ -17,7 +17,7 @@ public class AuthenticationService {
 		//take credentials and return the User to which they belong if it exists
 		if (username != null && password != null) {
 			//for now... this is fake!! 
-			;{
+			{
 				
 			}
 			

@@ -120,8 +120,11 @@ if :new.r_id is null then
 select "sequence2".nextval into  :new.r_id from dual;
 end if;
 end if;
+select 1 into :new.status_id from dual;
+select current_timestamp into :new.created_date from dual;
 end;
 /
+
 
 
 insert into reimbursements (r_description, amount, picture, u_id, status_id, created_date, resolve_date, resolver_id, r_type)
@@ -132,3 +135,6 @@ insert into r_type (r_type, title)values(2,'travel');
 insert into r_type (r_type, title)values(3,'entertainment');
 insert into r_type (r_type, title)values(4,'other');
 /
+commit; 
+
+
