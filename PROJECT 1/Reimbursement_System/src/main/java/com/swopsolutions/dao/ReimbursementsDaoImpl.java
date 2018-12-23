@@ -112,7 +112,7 @@ public class ReimbursementsDaoImpl implements MasterDAO {
 	// to use this method you need to put in the id of the reimbursement (r_id)
 	public int updateReimbursements(int r_id, int s_id, int resolver_id) {
 		try (Connection con = ConnectionUtil.getConnection(filename)) {
-			String sql = "Update reimbursements status_id= ? resolver_id = ? resolve_date= ? where r_id = ?";
+			String sql = "Update reimbursements set status_id= ?, resolver_id = ?, resolve_date= ? where r_id = ?";
 			PreparedStatement ps = con.prepareStatement(sql);
 			ps.setInt(1, s_id);
 			ps.setInt(4, r_id);
@@ -121,8 +121,9 @@ public class ReimbursementsDaoImpl implements MasterDAO {
 			return ps.executeUpdate();
 
 		} catch (SQLException e) {
-			System.out.println();
+			e.printStackTrace();
 		} catch (IOException i) {
+			i.printStackTrace();
 		}
 		return 0;
 	}

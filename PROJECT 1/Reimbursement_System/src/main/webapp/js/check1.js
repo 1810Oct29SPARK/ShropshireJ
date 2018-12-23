@@ -62,7 +62,7 @@ var storedReimbursement;
 		   ret+='</td><td>'+ item.created_date;
 		   ret+='</td>  <td>'+item.r_description;
 		  console.log(storedUser.role_id)
-		   if (storedUser.role_id===2){
+		   if (storedUser.role_id===2 && item.status_id ===1){
                ret+=`<td>
                <div id="imgbox1" class="btn-group">
                    <div class="btn-group">
@@ -106,7 +106,7 @@ var storedReimbursement;
 				let splitid= e.target.id.split('-');
 				let params='r_id='+splitid[1];
 				console.log(params);
-				fetch("http://localhost:7001/Reimbursement_System/approve.serv?"+params, {
+				fetch("http://localhost:7001/Reimbursement_System/approve.serv", {
 					method : "POST",
 						body:params
 				}).then(function(response) {
@@ -118,7 +118,7 @@ var storedReimbursement;
 				let splitid= e.target.id.split('-');
 				let params='r_id='+splitid[1];
 				console.log(params);
-				fetch("http://localhost:7001/Reimbursement_System/deny.serv?"+params, {
+				fetch("http://localhost:7001/Reimbursement_System/deny.serv", {
 					method : "POST",
 						body:params
 				}).then(function(response) {

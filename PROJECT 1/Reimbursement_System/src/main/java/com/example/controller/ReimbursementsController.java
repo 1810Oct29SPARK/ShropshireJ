@@ -1,5 +1,6 @@
 package com.example.controller;
 
+import java.io.IOException;
 import java.util.List;
 
 import javax.servlet.http.HttpServletRequest;
@@ -51,16 +52,34 @@ public class ReimbursementsController {
 	}
    public static String approve(HttpServletRequest req) {
 	 
-	   int id = Integer.parseInt(req.getParameter("r_id"));
-	   User u =(User) req.getSession().getAttribute("loger");
-	   serv.approve(id, u.getUser_id(), u.getRole_id());
+	   try {
+	    	String payload= req.getReader().readLine();
+	    	String[] pays=payload.split("=");
+	    	System.out.println(pays[1]);
+//	    	int id = Integer.parseInt(req.getParameter("r_id"));
+	 	   User u =(User) req.getSession().getAttribute("loger");
+	 	   serv.approve(Integer.parseInt(pays[1]) , u.getUser_id(), u.getRole_id());
+//			System.out.println(req.getReader().readLine());
+		} catch (IOException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
 	   return " ";
    }
    public static String deny(HttpServletRequest req) {
-		 
-	   int id = Integer.parseInt(req.getParameter("r_id"));
-	   User u =(User) req.getSession().getAttribute("loger");
-	   serv.deny(id, u.getUser_id(), u.getRole_id());
+	    try {
+	    	String payload= req.getReader().readLine();
+	    	String[] pays=payload.split("=");
+	    	System.out.println(pays[1]);
+//	    	int id = Integer.parseInt(req.getParameter("r_id"));
+	 	   User u =(User) req.getSession().getAttribute("loger");
+	 	   serv.deny(Integer.parseInt(pays[1]) , u.getUser_id(), u.getRole_id());
+//			System.out.println(req.getReader().readLine());
+		} catch (IOException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+	   
 	   return " ";
    }
 }

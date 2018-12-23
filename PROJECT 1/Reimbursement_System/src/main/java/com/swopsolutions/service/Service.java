@@ -50,6 +50,7 @@ public class Service {
 
 	public int deny(int r_id, int resolver_id, int role) {
 		int i = -1;
+		System.out.println(r_id+"hey in deny"+role);
 		if (role==2) {
 			i = rDAO.updateReimbursements(r_id, 3, resolver_id);
 
