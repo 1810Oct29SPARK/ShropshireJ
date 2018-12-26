@@ -33,7 +33,7 @@ public class RequestHelper {
 			case "/Reimbursement_System/deny.serv":
 				return ReimbursementsController.deny(req);
 		default:
-			return "indexhtml";// gonna change this soon g
+			return "indexhtml";
 
 		}
 

@@ -2,6 +2,10 @@
  * 
  */
 
+$(function () {
+  $('[data-toggle="popover"]').popover()
+})
+
 window.onload = function() {
 	populateUser();
 }
@@ -46,31 +50,6 @@ function populateUser() {
 
 	var storedReimbursement;
 
-	/*function populateReimbursement() {
-		// send a get request to localhost:7001/Reimbursement_System/employeeuser
-		fetch("http://localhost:7001/Reimbursement_System/getuserreimbursement.json", {
-			method : "POST"
-		}).then(function(response) {
-
-			return response.json();
-		}).then(function(data) {
- 
-		
-				document.getElementById('tbody').innerHTML = '';
-				let block = '';
-				for(i = 0; i < data.length; i++){
-					block += rbDisplay(data[i]);
-				}
-				document.getElementById('tbody').innerHTML = block;
-			});
-   
-
-		
-		
-
-		// define behavior for user returned
-		// define behavior for no user returned
-	}*/
 
 	   function rbDisplay(item){
 		   let ret='<tr><td> $'+ item.amount;
