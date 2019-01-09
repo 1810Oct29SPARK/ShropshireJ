@@ -1,0 +1,49 @@
+<mat-sidenav-container class="sidenav-container">
+  <mat-sidenav
+    #drawer
+    class="sidenav"
+    fixedInViewport="true"
+    [attr.role]="(isHandset$ | async) ? 'dialog' : 'navigation'"
+    [mode]="(isHandset$ | async) ? 'over' : 'side'"
+    [opened]="!(isHandset$ | async)"
+  >
+    <input
+      class="icon"
+      routerLink="/mainPage"
+      type="image"
+      src="../../assets/image/ko.jpg"
+    />
+    <mat-nav-list>
+      <input class="pic" type="image" src=">../../../../assets/image/guy.jpg" />
+      <br />
+      <a mat-list-item href="#"
+        ><mat-icon>accessibility_new</mat-icon> Dashboard</a>
+      <a mat-list-item href="#"><mat-icon>library_music</mat-icon>Library</a>
+      <a mat-list-item href="#"><mat-icon>library_add</mat-icon>Add Music</a>
+      <a mat-list-item href="#"><mat-icon>settings</mat-icon>Account</a>
+    </mat-nav-list>
+  </mat-sidenav>
+  <mat-sidenav-content>
+    <!-- Add Content Here -->
+    <mat-card>
+      <mat-card-title>Followers</mat-card-title>
+      <mat-card-content> you have 125 followers </mat-card-content>
+    </mat-card>
+    <!-- Add Content Here -->
+    <mat-card>
+      <span class="space"></span>
+      <mat-card-title>Sold Tracks</mat-card-title>
+      <mat-card-content>
+        <!-- Add Content Here -->
+        you have 125 Sold Tracks
+      </mat-card-content>
+    </mat-card>
+    <span class="space"></span>
+    <mat-card>
+      <mat-card-title>Albums Tracks</mat-card-title>
+      <mat-card-content> you have 125 Sold Albums </mat-card-content>
+    </mat-card>
+    <!-- Add Content Here -->
+    <span class="space"></span>
+  </mat-sidenav-content>
+</mat-sidenav-container>

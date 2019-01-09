@@ -1,0 +1,46 @@
+<mat-sidenav-container class="sidenav-container">
+  <mat-sidenav #drawer class="sidenav" fixedInViewport="true"
+      [attr.role]="(isHandset$ | async) ? 'dialog' : 'navigation'"
+      [mode]="(isHandset$ | async) ? 'over' : 'side'"
+      [opened]="!(isHandset$ | async)">
+      <input class="icon" routerLink = '/mainPage' type="image" src="../../assets/image/ko.jpg"/>
+    <mat-nav-list>
+      <input class="pic" type="image" src=">../../../../assets/image/guy.jpg">
+      <br>
+      <a mat-flat-button href="#"><mat-icon>accessibility_new</mat-icon> Dashboard</a>
+      <a mat-flat-button href="#"><mat-icon>music_note</mat-icon>Store</a>
+      <br>
+      <a mat-flat-button href="#"><mat-icon>list</mat-icon>Playlist</a>
+      <a mat-flat-button  (click)="getTrack()"><mat-icon>play_arrow</mat-icon>Top Albums</a>
+      <a mat-flat-button href="#"><mat-icon>subscriptions</mat-icon>Subscriptions</a>
+      <a mat-flat-button href="#"><mat-icon>settings</mat-icon>Account</a>
+    </mat-nav-list>
+  </mat-sidenav>
+  <mat-sidenav-content>
+    <!-- Add Content Here -->
+    <mat-card>
+        <mat-card-header><em><strong>Koality Music</strong></em></mat-card-header>
+        <mat-card-actions>
+          <img src="../../assets/image/ko.jpg">
+          <br>
+          <br>
+        </mat-card-actions>
+      </mat-card>
+
+
+
+
+      <div *ngFor="let track of tracks">
+        <mat-card *ngIf="tracksReceived">
+          <button mat-button>{{track['albumName']}}</button>
+          <img [src]="track['albumUrl']" *ngIf="track['albumUrl']">
+
+        </mat-card>
+        </div>
+
+
+
+
+
+  </mat-sidenav-content>
+</mat-sidenav-container>

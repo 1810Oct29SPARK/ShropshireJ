@@ -1,0 +1,102 @@
+<mat-tab-group mat-align-tabs="center">
+  <mat-tab label="Publisher">
+    <mat-card>
+      <mat-card-title>Publisher Sign-Up</mat-card-title>
+      <div class="container">
+        <mat-form-field appearance="outline">
+          <mat-label>First Name</mat-label>
+          <input matInput placeholder="First Name" />
+          <mat-icon matSuffix>sentiment_very_satisfied</mat-icon>
+        </mat-form-field>
+
+        <mat-form-field appearance="outline">
+          <mat-label>Last Name</mat-label>
+          <input matInput placeholder="Last Name" />
+          <mat-icon matSuffix>sentiment_very_satisfied</mat-icon>
+        </mat-form-field>
+
+        <mat-form-field appearance="outline">
+          <mat-label>Username</mat-label>
+          <input matInput placeholder="Username" />
+          <mat-icon matSuffix>sentiment_very_satisfied</mat-icon>
+        </mat-form-field>
+        <mat-form-field appearance="outline">
+          <mat-label>Company</mat-label>
+          <input matInput placeholder="Company 'optional'" />
+          <mat-icon matSuffix>sentiment_very_satisfied</mat-icon>
+        </mat-form-field>
+
+        <mat-form-field appearance="outline">
+          <mat-label>Email</mat-label>
+          <input matInput placeholder="Email" />
+          <mat-icon matSuffix>sentiment_very_satisfied</mat-icon>
+        </mat-form-field>
+
+        <mat-form-field appearance="outline">
+          <input matInput placeholder="password" />
+          <mat-icon matSuffix>sentiment_very_satisfied</mat-icon>
+        </mat-form-field>
+        <mat-form-field appearance="outline">
+          <input matInput placeholder="re-enter password" />
+
+          <mat-icon matSuffix>sentiment_very_satisfied</mat-icon>
+        </mat-form-field>
+        <button mat-raised-button (click)="Profile()">Sign-Up</button>
+      </div>
+    </mat-card>
+  </mat-tab>
+  <mat-tab label="User">
+    <div>
+      <mat-card>
+        <mat-card-title>User Sign-Up</mat-card-title>
+        <div class="example-container">
+          <mat-form-field appearance="outline">
+            <mat-label>First Name</mat-label>
+            <input matInput placeholder="First Name" />
+            <mat-icon matSuffix>sentiment_very_satisfied</mat-icon>
+          </mat-form-field>
+          <mat-form-field appearance="outline">
+            <mat-label>Last Name</mat-label>
+            <input matInput placeholder="Last Name" />
+            <mat-icon matSuffix>sentiment_very_satisfied</mat-icon>
+          </mat-form-field>
+
+          <mat-form-field appearance="outline">
+            <mat-label>Username</mat-label>
+            <input matInput placeholder="Username" />
+            <mat-icon matSuffix>sentiment_very_satisfied</mat-icon>
+          </mat-form-field>
+
+          <mat-form-field appearance="outline">
+            <mat-label>Email</mat-label>
+            <input matInput placeholder="Email" />
+            <mat-icon matSuffix>sentiment_very_satisfied</mat-icon>
+          </mat-form-field>
+          <mat-form-field>
+            <mat-select placeholder="Genre">
+              <mat-option value="option">HipHop</mat-option>
+              <mat-option value="option">Classical</mat-option>
+              <mat-option value="option">Rock</mat-option>
+              <mat-option value="option">Jazz</mat-option>
+              <mat-option value="option">Pop</mat-option>
+              <mat-option value="option">Rap</mat-option>
+              <mat-option value="option">Country</mat-option>
+            </mat-select>
+            <mat-hint align="end">Here's the dropdown arrow ^</mat-hint>
+          </mat-form-field>
+
+          <mat-form-field appearance="outline">
+            <input matInput placeholder="password" />
+            <mat-icon matSuffix>sentiment_very_satisfied</mat-icon>
+          </mat-form-field>
+          <mat-form-field appearance="outline">
+            <input matInput placeholder="re-enter password" />
+
+            <mat-icon matSuffix>sentiment_very_satisfied</mat-icon>
+          </mat-form-field>
+          <button mat-raised-button (click)="userProfile()">Sign-Up</button>
+        </div>
+      </mat-card>
+    </div>
+  </mat-tab>
+</mat-tab-group>

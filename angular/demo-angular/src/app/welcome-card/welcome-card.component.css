@@ -1,0 +1,44 @@
+.space{
+  margin: 0%;
+  flex:1 1 auto;
+  padding: 25%;
+
+}
+  mat-card-actions {
+  display: inline-block;
+  margin: 0% 10px;
+  color: black;
+  text-decoration: none;
+}
+
+mat-card {
+  margin: 5.0%;
+  padding-left: 35%;
+  background-color: rgb(121, 107, 107);
+
+
+}
+
+img {
+  width: 50%;
+  height: 50%;
+  display:block;
+  border-radius: 25%;
+
+
+}
+
+button{
+  margin:10%;
+  display:inline-block;
+  text-align: left;
+}
+.move{
+  padding-left: 7%;
+}
+
+mat-card-header{
+  text-align: left;
+  padding-left: 5%;
+  color: aliceblue;
+}
